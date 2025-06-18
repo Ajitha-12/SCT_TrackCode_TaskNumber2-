@@ -1,0 +1,132 @@
+:root {
+  --bg-color: #000;
+  --text-color: #00ffe7;
+  --display-bg: #111;
+  --display-color: #00ffe7;
+  --btn-bg: #111;
+  --btn-color: #fff;
+  --operator-color: #00ff88;
+  --highlight-color: #00ff88;
+  --shadow-color: rgba(0, 255, 136, 0.5);
+}
+
+body.light {
+  --bg-color: #f5f5f5;
+  --text-color: #222;
+  --display-bg: #fff;
+  --display-color: #000;
+  --btn-bg: #ffffff;
+  --btn-color: #000;
+  --operator-color: #ff5722;
+  --highlight-color: #ff9800;
+  --shadow-color: rgba(255, 152, 0, 0.3);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  padding-top: 20px;
+}
+
+.mode-toggle {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 14px;
+  color: var(--text-color);
+  transition: color 0.5s ease;
+}
+
+.calculator {
+  background: var(--btn-bg);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px var(--shadow-color);
+  width: 280px;
+  text-align: center;
+  transition: background 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+  animation: fadeInScale 0.6s ease-in-out;
+}
+
+@keyframes fadeInScale {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.display {
+  background: var(--display-bg);
+  color: var(--display-color);
+  padding: 15px;
+  font-size: 24px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height: 40px;
+  overflow-x: auto;
+  text-align: right;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+button.operator {
+  color: var(--operator-color);
+}
+
+button.func {
+  color: #ff0040;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: var(--highlight-color);
+  color: #fff;
+}
+
+#equals {
+  background-color: var(--highlight-color);
+  color: #fff;
+  font-weight: bold;
+}
+
+#clear {
+  background-color: #ff0033;
+  color: #fff;
+}
+
+.history-link {
+  margin-top: 20px;
+  display: inline-block;
+  color: var(--highlight-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}

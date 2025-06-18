@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <label class="mode-toggle">
+    <input type="checkbox" id="modeToggle" />
+    Toggle Light/Dark Mode
+  </label>
+  <div class="calculator">
+    <h1>Calculator</h1>
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button class="operator">/</button>
+
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button class="operator">*</button>
+
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button class="operator">-</button>
+
+      <button>0</button>
+      <button>.</button>
+      <button id="equals">=</button>
+      <button class="operator">+</button>
+
+      <button class="func">sin</button>
+      <button class="func">cos</button>
+      <button class="func">tan</button>
+      <button class="func">)</button>
+
+      <button class="func">√</button>
+      <button class="func">π</button>
+      <button class="func">e</button>
+      <button id="clear">C</button>
+    </div>
+    <a href="history.html" class="history-link">View History →</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
